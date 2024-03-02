@@ -1,7 +1,7 @@
 
 
 <!--
-  Copyright (c) 2016 Qualcomm Technologies, Inc.
+  Copyright (c) 2016-2017 Qualcomm Technologies, Inc.
   All Rights Reserved.
   Confidential and Proprietary - Qualcomm Technologies, Inc.
 -->
@@ -80,12 +80,6 @@ LensInfo : Information of the lens present in the module.
 *HorizontalViewAngle : HorizontalViewAngle in degrees
 *VerticalViewAngle : VerticalViewAngle in degrees
 *MinFocusDistance : Minimum distance in meters the lens could focus.
- MinRollDegree : Maximum degree of rotation along X axis of
-                 tele sensor with respect to the wide sensor.
- MinPitchDegree : Maximum degree of rotation along Y axis of
-                  tele sensor with respect to the wide sensor.
- MinYawDegree : Maximum degree of rotation along Z axis of
-                tele sensor with respect to the wide sensor.
 
 *VARIABLES MARKED WITH ASTRICK (*) ARE MANDATORY.
 
@@ -100,10 +94,9 @@ LensInfo : Information of the lens present in the module.
     <OisName>bu24333gwl</OisName>
     <EepromName>imx351_m24c64m</EepromName>
     <FlashName>pmic</FlashName>
-    <LG3ATuningInfoName>imx351</LG3ATuningInfoName>
     <ChromatixName>imx351_chromatix</ChromatixName>
     <ModesSupported>1</ModesSupported>
-    <Position>BACK_AUX</Position>
+    <Position>BACK</Position>
     <MountAngle>90</MountAngle>
     <CSIInfo>
       <CSIDCore>0</CSIDCore>
@@ -123,10 +116,10 @@ LensInfo : Information of the lens present in the module.
   </CameraModuleConfig>
   <CameraModuleConfig>
     <CameraId>1</CameraId>
-    <SensorName>hi553</SensorName>
-    <EepromName>hi553_brcf016gwz</EepromName>
-    <LG3ATuningInfoName>hi553</LG3ATuningInfoName>
-    <ChromatixName>hi553_chromatix</ChromatixName>
+    <SensorName>sl846</SensorName>
+    <EepromName>sl846_brcf016gwz</EepromName>
+    <FlashName>pmic</FlashName>
+    <ChromatixName>sl846_chromatix</ChromatixName>
     <ModesSupported>1</ModesSupported>
     <Position>FRONT</Position>
     <MountAngle>270</MountAngle>
@@ -137,38 +130,12 @@ LensInfo : Information of the lens present in the module.
       <ComboMode>0</ComboMode>
     </CSIInfo>
     <LensInfo>
-      <FocalLength>1.8</FocalLength>
-      <FNumber>2.2</FNumber>
-      <TotalFocusDistance>10</TotalFocusDistance>
-      <HorizontalViewAngle>77.2</HorizontalViewAngle>
-      <VerticalViewAngle>62.0</VerticalViewAngle>
-      <MinFocusDistance>0.6</MinFocusDistance>
-    </LensInfo>
-  </CameraModuleConfig>
-  <CameraModuleConfig>
-    <CameraId>2</CameraId>
-    <SensorName>s5k3m3</SensorName>
-    <EepromName>s5k3m3_brcb032gwz</EepromName>
-    <FlashName>pmic</FlashName>
-    <LG3ATuningInfoName>s5k3m3</LG3ATuningInfoName>
-    <ChromatixName>s5k3m3_chromatix</ChromatixName>
-    <ModesSupported>1</ModesSupported>
-    <Position>BACK</Position>
-    <MountAngle>90</MountAngle>
-    <CSIInfo>
-      <CSIDCore>1</CSIDCore>
-      <LaneMask>0x1F</LaneMask>
-      <LaneAssign>0x4320</LaneAssign>
-      <ComboMode>0</ComboMode>
-    </CSIInfo>
-    <LensInfo>
-      <LensType>WIDE</LensType>
-      <FocalLength>1.78</FocalLength>
+      <FocalLength>2.68</FocalLength>
       <FNumber>1.9</FNumber>
-      <TotalFocusDistance>10</TotalFocusDistance>
-      <HorizontalViewAngle>100.8</HorizontalViewAngle>
-      <VerticalViewAngle>83.5</VerticalViewAngle>
-      <MinFocusDistance>1</MinFocusDistance>
+      <TotalFocusDistance>0.5</TotalFocusDistance>
+      <HorizontalViewAngle>67.5</HorizontalViewAngle>
+      <VerticalViewAngle>53.3</VerticalViewAngle>
+      <MinFocusDistance>0.5</MinFocusDistance>
     </LensInfo>
   </CameraModuleConfig>
 </CameraConfigurationRoot>

@@ -8,14 +8,6 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := hw_vari.sh
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := bin/hw_vari.sh
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE       := init.baseband.sh
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
@@ -32,18 +24,10 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := init.joan.hdmi.sh
+LOCAL_MODULE       := init.lge.usb.sh
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := bin/init.joan.hdmi.sh
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := init.lge.usb.lao.sh
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := bin/init.lge.usb.lao.sh
+LOCAL_SRC_FILES    := bin/init.lge.usb.sh
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)
 include $(BUILD_PREBUILT)
 
@@ -52,6 +36,14 @@ LOCAL_MODULE       := init.qcom.class_core.sh
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := bin/init.qcom.class_core.sh
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := init.qcom.early_boot.sh
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := bin/init.qcom.early_boot.sh
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)
 include $(BUILD_PREBUILT)
 
@@ -96,14 +88,6 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := hw_vari.rc
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/init/hw_vari.rc
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE       := init.baseband.proxy.rc
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
@@ -116,54 +100,6 @@ LOCAL_MODULE       := init.lge.audio.rc
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := etc/init/init.lge.audio.rc
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := init.lge.bootproperty_trigger.rc
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/init/init.lge.bootproperty_trigger.rc
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := init.lge.vendor.on_boot.rc
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/init/init.lge.vendor.on_boot.rc
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := init.lge.vendor.on_post_fs_data.rc
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/init/init.lge.vendor.on_post_fs_data.rc
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := init.lge.vendor.on_post_fs.rc
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/init/init.lge.vendor.on_post_fs.rc
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := init.lge.vendor.on_property.rc
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/init/init.lge.vendor.on_property.rc
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := init.lge.vendor.services.rc
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/init/init.lge.vendor.services.rc
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init
 include $(BUILD_PREBUILT)
 
@@ -184,22 +120,6 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := init.joan_vendor.rc
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/init/hw/init.joan_vendor.rc
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE       := init.joan.rc
-LOCAL_MODULE_TAGS  := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/init/hw/init.joan.rc
-LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
 LOCAL_MODULE       := init.lge.fingerprints.rc
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
@@ -216,10 +136,10 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := init.lge.sensors.rc
+LOCAL_MODULE       := init.lge.sar_controller.rc
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/init/hw/init.lge.sensors.rc
+LOCAL_SRC_FILES    := etc/init/hw/init.lge.sar_controller.rc
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
 include $(BUILD_PREBUILT)
 
@@ -232,10 +152,18 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := init.msm8998.rc
+LOCAL_MODULE       := init.phoenix_sprout_vendor.rc
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/init/hw/init.msm8998.rc
+LOCAL_SRC_FILES    := etc/init/hw/init.phoenix_sprout_vendor.rc
+LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := init.phoenix_sprout.rc
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := etc/init/hw/init.phoenix_sprout.rc
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
 include $(BUILD_PREBUILT)
 
@@ -264,28 +192,28 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)/init/hw
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := fstab.joan
+LOCAL_MODULE       := fstab.phoenix_sprout
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_REQUIRED_MODULES := fstab.joan_ramdisk
-LOCAL_SRC_FILES    := etc/fstab.joan
+LOCAL_REQUIRED_MODULES := fstab.phoenix_sprout_ramdisk
+LOCAL_SRC_FILES    := etc/fstab.phoenix_sprout
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_ETC)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := fstab.joan_ramdisk
-LOCAL_MODULE_STEM  := fstab.joan
+LOCAL_MODULE       := fstab.phoenix_sprout_ramdisk
+LOCAL_MODULE_STEM  := fstab.phoenix_sprout
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/fstab.joan
-LOCAL_MODULE_PATH  := $(TARGET_RAMDISK_OUT)
+LOCAL_SRC_FILES    := etc/fstab.phoenix_sprout
+LOCAL_MODULE_PATH  := $(TARGET_RECOVERY_ROOT_OUT)/first_stage_ramdisk
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := ueventd.joan.rc
+LOCAL_MODULE       := ueventd.phoenix_sprout.rc
 LOCAL_MODULE_STEM  := ueventd.rc
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := etc/ueventd.joan.rc
+LOCAL_SRC_FILES    := etc/ueventd.phoenix_sprout.rc
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR)
 include $(BUILD_PREBUILT)

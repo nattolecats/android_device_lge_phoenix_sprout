@@ -69,8 +69,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     $(DEVICE_PATH)/audio/audio_effects_tune.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects_tune.xml \
-    $(DEVICE_PATH)/audio/audio_output_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_output_policy.conf \
-    $(DEVICE_PATH)/audio/audio_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy.conf \
     $(DEVICE_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     $(DEVICE_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(DEVICE_PATH)/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
@@ -109,9 +107,8 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml \
-    $(DEVICE_PATH)/configs/camera/hi553_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/hi553_chromatix.xml \
     $(DEVICE_PATH)/configs/camera/imx351_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/imx351_chromatix.xml \
-    $(DEVICE_PATH)/configs/camera/s5k3m3_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k3m3_chromatix.xml
+    $(DEVICE_PATH)/configs/camera/sl846_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/sl846_chromatix.xml
 
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0 \
@@ -233,12 +230,11 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    hw_vari.sh \
     init.baseband.sh \
     init.class_main.sh \
-    init.joan.hdmi.sh \
-    init.lge.usb.lao.sh \
+    init.lge.usb.sh \
     init.qcom.class_core.sh \
+    init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.sensors.sh \
     init.qcom.sh \
@@ -246,32 +242,23 @@ PRODUCT_PACKAGES += \
     init.qti.qseecomd.sh
 
 PRODUCT_PACKAGES += \
-    hw_vari.rc \
     init.lge.audio.rc \
-    init.lge.bootproperty_trigger.rc \
-    init.lge.vendor.on_boot.rc \
-    init.lge.vendor.on_post_fs_data.rc \
-    init.lge.vendor.on_post_fs.rc \
-    init.lge.vendor.services.rc \
     init.qti.fm.rc \
-    vendor.lge.power.rc
-
-PRODUCT_PACKAGES += \
+    vendor.lge.power.rc \
     init.baseband.proxy.rc \
-    init.joan_vendor.rc \
-    init.joan.rc \
+    init.phoenix_sprout_vendor.rc \
+    init.phoenix_sprout.rc \
     init.lge.fingerprints.rc \
     init.lge.power.rc \
-    init.lge.sensors.rc \
+    init.lge.sar_controller.rc \
     init.lge.usb.configfs.rc \
-    init.msm8998.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc
 
 PRODUCT_PACKAGES += \
-    fstab.joan \
-    ueventd.joan.rc
+    fstab.phoenix_sprout \
+    ueventd.phoenix_sprout.rc
 
 # IRSC
 PRODUCT_COPY_FILES += \
@@ -382,7 +369,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
 
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/privapp-permissions-joan.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-joan.xml \
+    $(DEVICE_PATH)/configs/privapp-permissions-phoenix_sprout.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-phoenix_sprout.xml \
     $(DEVICE_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-hotword.xml
 
 # Power
@@ -445,7 +432,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     $(DEVICE_PATH)/configs/sensors/sensor_def_common.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_common.conf \
-    $(DEVICE_PATH)/configs/sensors/sensor_def_joan_global_com.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_variable.conf
+    $(DEVICE_PATH)/configs/sensors/sensor_def_variable.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_variable.conf
 
 # Shipping API Level
 PRODUCT_SHIPPING_API_LEVEL := 25
@@ -499,7 +486,6 @@ PRODUCT_PACKAGES += \
 # Wifi
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
-    $(DEVICE_PATH)/wifi/wifi_concurrency_cfg.txt:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wifi_concurrency_cfg.txt \
     $(DEVICE_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(DEVICE_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini
 
