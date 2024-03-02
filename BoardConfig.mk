@@ -35,6 +35,14 @@ TARGET_USES_64_BIT_BINDER := true
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
+# A/B
+AB_OTA_PARTITIONS += \
+    boot \
+    system \
+    vendor
+
+AB_OTA_UPDATER := true
+
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
@@ -134,6 +142,8 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/tap2wake"
 
 # Recovery
 BOOTLOADER_MESSAGE_OFFSET := 128
+TARGET_NO_RECOVERY := true
+BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_RECOVERY_DENSITY := xxxhdpi
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.phoenix_sprout
 
