@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/lge/joan
+DEVICE_PATH := device/lge/phoenix_sprout
 
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
@@ -420,7 +420,7 @@ PRODUCT_PACKAGES += \
 
 # Recovery
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/recovery/root/init.recovery.joan.rc:root/init.recovery.joan.rc
+    $(DEVICE_PATH)/recovery/root/init.recovery.phoenix_sprout.rc:root/init.recovery.phoenix_sprout.rc
 
 # RCS
 PRODUCT_PACKAGES += \
@@ -467,7 +467,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.joan
+    vendor.lineage.touch@1.0-service.phoenix_sprout
 
 # TimeKeep
 PRODUCT_PACKAGES += \
@@ -511,7 +511,7 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     wpa_supplicant \
     wpa_supplicant.conf \
-    WifiOverlay.lge_msm8998
+    WifiOverlay.phoenix_sprout
 
 # Wifi IPA
 PRODUCT_PACKAGES += \
@@ -519,4 +519,4 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml
 
 # Inherit proprietary blobs
-$(call inherit-product, vendor/lge/joan/joan-vendor.mk)
+$(call inherit-product, vendor/lge/phoenix_sprout/phoenix_sprout-vendor.mk)

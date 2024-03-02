@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=joan
+DEVICE=phoenix_sprout
 VENDOR=lge
 
 # Load extract_utils and do some sanity checks
@@ -32,8 +32,6 @@ write_headers
 
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 write_makefiles "${MY_DIR}/proprietary-files_phoenix.txt" true
-write_makefiles "${MY_DIR}/proprietary-files_h930.txt" true
-write_makefiles "${MY_DIR}/proprietary-files_h932.txt" true
 
 #append_firmware_calls_to_makefiles "${MY_DIR}/proprietary-firmware.txt"
 

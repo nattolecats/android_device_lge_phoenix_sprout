@@ -15,7 +15,7 @@
 //
 
 cc_library_static {
-    name: "libinit_lge_msm8998",
+    name: "libinit_phoenix_sprout",
     recovery_available: true,
     srcs: ["init_lge_msm8998.cpp"],
     include_dirs: [

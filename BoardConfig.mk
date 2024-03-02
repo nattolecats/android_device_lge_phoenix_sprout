@@ -4,12 +4,12 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/lge/joan
+DEVICE_PATH := device/lge/phoenix_sprout
 
-TARGET_OTA_ASSERT_DEVICE := v30,joan,h930,h932
+TARGET_OTA_ASSERT_DEVICE := phoenix_sprout
 
 # inherit from the proprietary version
-include vendor/lge/joan/BoardConfigVendor.mk
+include vendor/lge/phoenix_sprout/BoardConfigVendor.mk
 
 # Platform
 TARGET_ARCH := arm64
@@ -89,8 +89,8 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_lge_msm8998
-TARGET_RECOVERY_DEVICE_MODULES := libinit_lge_msm8998
+TARGET_INIT_VENDOR_LIB := libinit_phoenix_sprout
+TARGET_RECOVERY_DEVICE_MODULES := libinit_phoenix_sprout
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=joan user_debug=31 msm_rtb.filter=0x37
@@ -104,7 +104,7 @@ BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_SOURCE := kernel/lge/msm8998
-TARGET_KERNEL_CONFIG := lineageos_joan_defconfig
+TARGET_KERNEL_CONFIG := lineageos_phoenix_sprout_defconfig
 TARGET_KERNEL_VERSION := 4.4
 TARGET_KERNEL_LLVM_BINUTILS := false
 
@@ -133,7 +133,7 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/lge_touch/tap2wake"
 # Recovery
 BOOTLOADER_MESSAGE_OFFSET := 128
 TARGET_RECOVERY_DENSITY := xxxhdpi
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.joan
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.phoenix_sprout
 
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true

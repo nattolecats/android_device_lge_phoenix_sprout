@@ -1,5 +1,5 @@
 #
-# system props for joan
+# vendor props for phoenix_sprout
 #
 
 # Audio
@@ -99,7 +99,7 @@ vendor.lge.fm_gain_control_headset=0.9
 vendor.lge.fm_gain_control_speaker=0.7
 
 # Bluetooth
-bluetooth.device.default_name=LG V30 ThinQ
+bluetooth.device.default_name=LG G7 One
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.bluetooth.a2dp_offload.disabled=true
 persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac
