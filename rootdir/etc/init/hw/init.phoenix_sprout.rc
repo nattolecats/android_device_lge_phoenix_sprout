@@ -45,9 +45,6 @@ on boot
 
 # BSP_Display End
 
-on early-fs
-    ffu_update
-
 # BSP_Display Start
 on boot
 
