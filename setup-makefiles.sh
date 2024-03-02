@@ -31,7 +31,7 @@ setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
 write_headers
 
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
-write_makefiles "${MY_DIR}/proprietary-files_phoenix.txt" true
+write_makefiles "${MY_DIR}/proprietary-files_common.txt" true
 
 #append_firmware_calls_to_makefiles "${MY_DIR}/proprietary-firmware.txt"
 
