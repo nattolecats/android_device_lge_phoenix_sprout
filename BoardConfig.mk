@@ -109,6 +109,7 @@ BOARD_KERNEL_CMDLINE += androidboot.configfs=true androidboot.usbcontroller=a800
 BOARD_KERNEL_CMDLINE += loop.max_part=7 androidboot.hardware=phoenix_sprout
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery androidboot.fstab_suffix=phoenix_sprout
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/1da4000.ufshc
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_RAMDISK_OFFSET := 0x01000000
