@@ -101,16 +101,20 @@ TARGET_INIT_VENDOR_LIB := libinit_phoenix_sprout
 TARGET_RECOVERY_DEVICE_MODULES := libinit_phoenix_sprout
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=joan user_debug=31 msm_rtb.filter=0x37
-BOARD_KERNEL_CMDLINE += ehci-hcd.park=3 lpm_levels.sleep_disabled=1
-BOARD_KERNEL_CMDLINE += sched_enable_hmp=1 sched_enable_power_aware=1
-BOARD_KERNEL_CMDLINE += service_locator.enable=1 swiotlb=2048 androidboot.configfs=true
-BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a800000.dwc3
-BOARD_KERNEL_CMDLINE += loop.max_part=7 androidboot.fstab_suffix=qcom
+BOARD_BOOT_HEADER_VERSION := 1
+BOARD_KERNEL_CMDLINE := user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 
+BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 sched_enable_hmp=1
+BOARD_KERNEL_CMDLINE += sched_enable_power_aware=1 service_locator.enable=1 swiotlb=2048
+BOARD_KERNEL_CMDLINE += androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3
+BOARD_KERNEL_CMDLINE += loop.max_part=7 androidboot.hardware=phoenix_sprout
+BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery androidboot.fstab_suffix=phoenix_sprout
 BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/1da4000.ufshc
 BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_OFFSET := 0x00008000
+BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_SOURCE := kernel/lge/msm8998
 TARGET_KERNEL_CONFIG := lineageos_phoenix_sprout_defconfig
 TARGET_KERNEL_VERSION := 4.4
