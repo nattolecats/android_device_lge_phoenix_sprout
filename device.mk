@@ -448,10 +448,6 @@ PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
 
-# Releasetools
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/releasetools/device_check.sh:install/bin/device_check.sh
-
 # Seccomp
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
