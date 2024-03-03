@@ -79,7 +79,7 @@ void init_target_properties()
     for (const auto& entry : android::base::Split(android::base::Trim(cmdline), " ")) {
         std::vector<std::string> pieces = android::base::Split(entry, "=");
         if (pieces.size() == 2) {
-            if(pieces[0].compare("androidboot.vendor.lge.model.name") == 0)
+            if((pieces[0].compare("androidboot.vendor.lge.model.name") == 0) || (pieces[0].compare("androidboot.product.model") == 0))
             {
                 model = pieces[1];
                 unknownDevice = false;
