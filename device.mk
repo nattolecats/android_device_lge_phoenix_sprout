@@ -341,10 +341,6 @@ PRODUCT_PACKAGES += \
     nqnfcinfo \
     Tag
 
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
-    $(DEVICE_PATH)/configs/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
-
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \

@@ -317,7 +317,6 @@ vendor/lib/egl/eglSubDriverAndroid.so|0281b6e172065bcf1f46dfb0ab23aee57df4f826
 vendor/lib/egl/libEGL_adreno.so|e8217b52ee66ffb2a091a2e81565dece057261e9
 vendor/lib/egl/libGLESv1_CM_adreno.so|046e9020004fdd54ebe19cee923b25261c419fe6
 vendor/lib/egl/libGLESv2_adreno.so|2b09aa80e0d2660c9c0ecf0c177724219f8c6d42
-vendor/lib/egl/libQTapGLES.so|eb1414aee39221b707fd6df6fe423f826f4adb57
 vendor/lib/egl/libq3dtools_adreno.so|b43e39f86ed2fc411f5a7202214f660083e63cbc
 vendor/lib/egl/libq3dtools_esx.so|a953e89fa73dff3cb7b43e183c3f36ad7a73c022
 vendor/lib/libC2D2.so|b250b2b94a70b465f49f49b9f99f02ddacf4ffd0
@@ -332,7 +331,6 @@ vendor/lib64/egl/eglSubDriverAndroid.so|d883d49a91c0a8da783d6df5e48b3f0e02f5ac59
 vendor/lib64/egl/libEGL_adreno.so|3dabe7acc08a4fa515faadd905cf596cc1feda74
 vendor/lib64/egl/libGLESv1_CM_adreno.so|ffda460984dfba47c62fc8c930219235e10ce863
 vendor/lib64/egl/libGLESv2_adreno.so|7f4ee250b12da5629614e1a263047615bfb89175
-vendor/lib64/egl/libQTapGLES.so|6fb056221e4417525bbf202efc7237697bf4037f
 vendor/lib64/egl/libq3dtools_adreno.so|ff8f8e0da729a9ceb272b08de8fe9eb1d02d5eed
 vendor/lib64/egl/libq3dtools_esx.so|d4eab828f11009c52edd3661f6295750bf22ca0d
 vendor/lib64/libC2D2.so|f836c442b6832d70083af81994bb6eb4fe5a4b51
@@ -385,8 +383,8 @@ vendor/lib64/libsdmextension.so|69028df8b08ded29b835453b84e9a9c4fea958d1
 vendor/lib64/libtinyxml2_1.so|ba981e332895a053a67fc54a8190365a3ad37f2d
 
 # Graphics (Vulkan) - from phoenix_sprout - phoenix_lao_com-user 10 QKQ1.190918.001 202681220e953 release-keys
-vendor/lib/hw/vulkan.msm8998.so|1f1e27bf3254cebbc1c0aa961c83a67f2ba8aa66
-vendor/lib64/hw/vulkan.msm8998.so|ba974da34ad96003e77de2bece70d3eeaa758988
+vendor/lib/hw/vulkan.adreno.so
+vendor/lib64/hw/vulkan.adreno.so
 
 # Hotword Enrollment
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk:system_ext/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk;PRESIGNED
@@ -414,7 +412,12 @@ vendor/lib64/libgcs-osal.so
 vendor/lib64/libgcs.so
 
 # NFC
-vendor/lib/libpn553_fw.so
+vendor/bin/hw/android.hardware.nfc@1.2-service-cxd22xx
+vendor/etc/init/android.hardware.nfc@1.2-service-cxd22xx.rc
+vendor/etc/libnfc-nci.conf
+vendor/etc/libnfc-cxd22xx.conf
+vendor/etc/libnfc-cxd-RF.conf
+vendor/firmware/cxd224x_firmware.bin
 
 # Perf
 vendor/etc/perf/commonresourceconfigs.xml
@@ -435,9 +438,7 @@ vendor/etc/powerhint.xml
 vendor/etc/qdcm_calib_data_SW49410_cmd_mode_dsc_dsi_panel.xml
 
 # Sensors
-vendor/lib/sensors.sar.so
 vendor/lib/sensors.ssc.so
-vendor/lib64/sensors.sar.so
 vendor/lib64/sensors.ssc.so
 
 # Thermal
