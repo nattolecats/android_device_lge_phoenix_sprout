@@ -14,6 +14,8 @@ persist.camera.								u:object_r:vendor_camera_prop:s0
 persist.debug.eis.							u:object_r:vendor_camera_prop:s0
 vendor.lge.camera.							u:object_r:vendor_camera_prop:s0
 
+vendor.powerhal.                               u:object_r:vendor_power_prop:s0
+
 persist.sys.thermald_miti_off				u:object_r:thermal-engine_prop:s0
 persist.vendor.lge.sys.thermald_miti_off	u:object_r:thermal-engine_prop:s0
 
