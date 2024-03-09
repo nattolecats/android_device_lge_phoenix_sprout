@@ -10,6 +10,8 @@ ifneq ($(filter phoenix_sprout,$(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
+$(shell mkdir -p $(shell pwd)/out/target/product/$(TARGET_DEVICE)/obj/KERNEL_OBJ/usr)
+
 include $(CLEAR_VARS)
 
 # builds require us to create the mount points at compile time.
