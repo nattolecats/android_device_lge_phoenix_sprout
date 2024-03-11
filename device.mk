@@ -527,5 +527,9 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
 
+# Remove unwanted apps
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Inherit proprietary blobs
 $(call inherit-product, vendor/lge/phoenix_sprout/phoenix_sprout-vendor.mk)
